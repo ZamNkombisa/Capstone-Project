@@ -1,0 +1,115 @@
+/*Default browser styles*/
+body, h1, h2, h3, ul, li, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/*Set a background color for the body*/
+body {
+    background-color: #7f5632;
+    font-family: Arial, sans-serif;
+}
+
+/*Style the header*/
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/*Style the main content*/
+.container {
+    padding: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/*Style the footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/*Style the contact form*/
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*Style links*/
+a {
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Responsive design for smaller screens*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+/*Responsive design for even smaller screens*/
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 5px;
+    }
+}
