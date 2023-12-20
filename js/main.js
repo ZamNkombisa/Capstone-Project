@@ -101,6 +101,36 @@ document.addEventListener("DOMContentLoaded", function () {
     return savedRecipes ? JSON.parse(savedRecipes) : [];
   }
 
+  document
+    .getElementById("reviewForm")
+    .addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const recipeId = "one";
+      const userId = 1990;
+      const rating = document.getElementById("rating").value;
+      const comment = document.getElementById("comment").value;
+
+      try {
+        const response = await fetch(`/api/recipes/${recipeId}/reviews`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userId, rating, comment }),
+        });
+
+        if (response.ok) {
+          // Handle successful review submission (e.g., update UI)
+        } else {
+          // Handle error response
+          console.error("Failed to submit review");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    });
+
   //Load recipe cards on page load
   renderRecipeCards();
 });
